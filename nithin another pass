@@ -1,0 +1,23 @@
+import random
+import string
+import time
+
+target_id = "rcb"
+
+possible_chars = string.ascii_letters + string.digits + string.punctuation
+cracked_id = ""
+
+print("--- Cracking Started ---")
+
+for i in range(len(target_id)):
+    guess = ""
+    
+    while guess != target_id[i]:
+        guess = random.choice(possible_chars)
+        print(f"Current Progress: {cracked_id}{guess}", end="\r", flush=True)
+        time.sleep(0.1)
+    
+    cracked_id += guess
+
+print(f"\n\nSuccess! The ID is: {cracked_id}")
+

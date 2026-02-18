@@ -1,0 +1,12 @@
+i=0
+while(i<51):
+    print("sagar")
+    if(i>5):
+        i+=1
+        continue
+    i+=1
+l=["sagar",10,"hockey"]
+r=0
+while(r<len(l)):
+    print(l[r])
+    r+=1
